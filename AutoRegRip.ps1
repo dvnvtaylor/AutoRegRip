@@ -7,8 +7,7 @@ $path = gci '.\User Hives\'
 foreach ($user in $path){
   
 	$name = $user.Name
-    echo $name
-    .\rip.exe -r .\'User Hives'\$name\NTUSER.DAT -f ntuser > .\'User Hives'\$name\nt_"$name".txt
+	.\rip.exe -r .\'User Hives'\$name\NTUSER.DAT -f ntuser > .\'User Hives'\$name\nt_"$name".txt
 	.\rip.exe -r .\'User Hives'\$name\UsrClass.dat -f usrclass > .\'User Hives'\$name\usr_"$name".txt
 }
 
